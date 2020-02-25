@@ -1,0 +1,50 @@
+{
+  "name": "@webfaas/webfaas-plugin-packageregistry-github",
+  "version": "0.0.1-alpha",
+  "description": "WebFaaS Framework - Plugin - Package Registry - GitHub",
+  "main": "lib/index.js",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "webfaas",
+    "plugin"
+  ],
+  "scripts": {
+    "test": "mocha --config scripts/mocha.json",
+    "test:coverage": "nyc --nycrc-path scripts/nyc.json npm run test",
+    "start": "node_modules/.bin/tsc -w && npm run build:static",
+    "build": "npm run build:clean && node_modules/.bin/tsc && npm run build:static",
+    "build:clean": "rm -rf dist",
+    "build:static": "cp package.json dist && cp README.md dist && cp .npmignore dist && cp src/test/data -R dist/test",
+    "setnpmtoken": "rm ~/.npmrc && echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/.npmrc",
+    "publish_npm": "cd dist && npm publish --access public",
+    "pack": "npm pack dist",
+    "buildAndTest": "npm run build && npm run test:coverage",
+    "setnpmtokenAndPublish": "npm run setnpmtoken && npm run publish_npm",
+    "sonar": "node scripts/sonar-project.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webfaas/webfaas-plugin-packageregistry-github.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2",
+    "@types/mocha": "^5.2",
+    "@types/node": "^13.1",
+    "typescript": "^3.7",
+    "chai": "^4.2",
+    "mocha": "^6.2",
+    "nyc": "^15.0",
+    "typescript-tslint-plugin": "^0.5",
+    "sonarqube-scanner": "^2.5.0",
+    "@webfaas/webfaas-core": "^0.2"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Rogério Dias Moreira",
+    "email": "rogeriodegoiania@gmail.com"
+  },
+  "license": "MIT"
+}
