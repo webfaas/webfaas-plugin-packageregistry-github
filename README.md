@@ -50,11 +50,11 @@ import { ModuleManager } from "@webfaas/webfaas-core";
 import { PackageRegistry } from "../lib/PackageRegistry";
 
 var moduleManager = new ModuleManager();
-moduleManager.getPackageStoreManager().getPackageRegistryManager().addRegistry("github", "", new PackageRegistry());
+moduleManager.getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager().addRegistry("github", "", new PackageRegistry());
 
 (async function(){
     try {
-        var moduleObj: any = await moduleManager.import("@webfaaslabs/mathsum", "0.0.1", undefined, "github");
+        var moduleObj: any = await moduleManager.getModuleManagerImport().import("@webfaaslabs/mathsum", "0.0.1", undefined, "github");
         
         if (moduleObj){
             console.log("module loaded", moduleObj);
