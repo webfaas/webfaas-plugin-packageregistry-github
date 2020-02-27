@@ -1,6 +1,6 @@
 {
   "name": "@webfaas/webfaas-plugin-packageregistry-github",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-alpha2",
   "description": "WebFaaS Framework - Plugin - Package Registry - GitHub",
   "main": "lib/index.js",
   "readmeFilename": "README.md",
@@ -37,7 +37,7 @@
     "nyc": "^15.0",
     "typescript-tslint-plugin": "^0.5",
     "sonarqube-scanner": "^2.5.0",
-    "@webfaas/webfaas-core": "^0.2"
+    "@webfaas/webfaas-core": "^0.4"
   },
   "engines": {
     "node": ">=10.0.0"

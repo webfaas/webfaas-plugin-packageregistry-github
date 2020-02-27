@@ -34,7 +34,7 @@ export default class WebFassPlugin implements IPlugin {
             
             let name = item.name || newRegistry.getTypeName();
             let slaveName = item.slaveName || "";
-            core.getModuleManager().getPackageStoreManager().getPackageRegistryManager().addRegistry(name, slaveName, newRegistry);
+            core.getModuleManager().getModuleManagerImport().getPackageStoreManager().getPackageRegistryManager().addRegistry(name, slaveName, newRegistry);
 
             this.listRegistry.push(newRegistry);
         }
