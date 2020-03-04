@@ -1,6 +1,6 @@
 {
   "name": "@webfaas/webfaas-plugin-packageregistry-github",
-  "version": "0.1.0-alpha2",
+  "version": "0.1.0",
   "description": "WebFaaS Framework - Plugin - Package Registry - GitHub",
   "main": "lib/index.js",
   "readmeFilename": "README.md",
