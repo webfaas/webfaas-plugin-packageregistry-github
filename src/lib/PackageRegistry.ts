@@ -3,8 +3,8 @@ import { IncomingHttpHeaders } from "http";
 import { Log } from "@webfaas/webfaas-core";
 import { IManifest } from "@webfaas/webfaas-core";
 import { IPackageRegistry, IPackageRegistryResponse } from "@webfaas/webfaas-core";
-import { PackageStoreUtil, PackageStore, IPackageStoreItemData } from "@webfaas/webfaas-core";
-import { ClientHTTP, ModuleNameUtil, IClientHTTPResponse } from "@webfaas/webfaas-core";
+import { PackageStoreUtil } from "@webfaas/webfaas-core";
+import { ClientHTTP, IClientHTTPResponse } from "@webfaas/webfaas-core";
 
 import { PackageRegistryConfig } from "./PackageRegistryConfig";
 
