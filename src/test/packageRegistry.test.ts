@@ -114,7 +114,7 @@ describe("Package Registry - getManifest", () => {
             let packageStore = packageRegistryResponse1.packageStore;
             chai.expect(packageStore).to.not.null;
             if (packageStore){
-                chai.expect(packageStore.getEtag()).to.eq('"9d159e460b33645b7dd1d0c18cc988b5"');
+                chai.expect(packageStore.getEtag()).to.contain('9d159e460b33645b7dd1d0c18cc988b5');
 
                 let manifest = packageStore.getManifest();
                 chai.expect(manifest).to.not.null;
@@ -130,7 +130,7 @@ describe("Package Registry - getManifest", () => {
         let packageRegistryResponse2 = await packageRegistry_default.getManifest("@webfaaslabs/mathsum", '"9d159e460b33645b7dd1d0c18cc988b5"');
         chai.expect(packageRegistryResponse2).to.not.null;
         chai.expect(packageRegistryResponse2.packageStore).to.null;
-        chai.expect(packageRegistryResponse2.etag).to.eq('"9d159e460b33645b7dd1d0c18cc988b5"');
+        chai.expect(packageRegistryResponse2.etag).to.contain('9d159e460b33645b7dd1d0c18cc988b5');
     })
 
     it("getManifest - notfound***", async function(){

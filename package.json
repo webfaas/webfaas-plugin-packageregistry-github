@@ -1,6 +1,6 @@
 {
   "name": "@webfaas/webfaas-plugin-packageregistry-github",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "WebFaaS Framework - Plugin - Package Registry - GitHub",
   "main": "lib/index.js",
   "readmeFilename": "README.md",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webfaas/webfaas-plugin-packageregistry-github.git"
+    "url": "git@github.com:webfaas/webfaas-plugin-packageregistry-github.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,7 +35,7 @@
     "nyc": "^15.0",
     "typescript": "^3.8",
     "typescript-tslint-plugin": "^0.5",
-    "@webfaas/webfaas-core": "^0.6"
+    "@webfaas/webfaas-core": "^0.12"
   },
   "engines": {
     "node": ">=10.0.0"
